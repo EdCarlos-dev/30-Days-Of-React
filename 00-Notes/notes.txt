@@ -1,0 +1,5 @@
+Git comand
+
+$ git branch -a
+
+see all branches
