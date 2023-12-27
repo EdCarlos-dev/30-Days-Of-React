@@ -1,0 +1,27 @@
+Exercises: What is React?
+
+    What is React?
+    What is a library?
+    What is a single page application?
+    What is a component ?
+    What is the latest version of React?
+    What is DOM?
+    What is React Virtual DOM?
+    What does a web application or a website(composed of) have?
+
+
+Exercises: Why React?
+
+    Why did you chose to use react?
+    What measures do you use to know popularity ?
+    What is more popular, React or Vue ?
+
+Exercises: JSX
+
+    What is an HTML element?
+    How to write a self closing HTML element?
+    What is an HTML attribute? Write some of them
+    What is JSX?
+    What is babel?
+    What is a transpiler?
+
