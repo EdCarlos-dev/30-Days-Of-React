@@ -3,8 +3,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 // To get the root element from the HTML document
 import reactLogo from './images/logo192.png'
+import htmlLogo from './images/htmllogo.png'
+import cssLogo from './images/csslogo.png'
+import javascriptLogo from './images/javascriptlogo.png'
 // JSX element, header
-const welcome = 'Welcome to 30 Days Of React'
+const welcome = 'Welcome'
 const title = 'Getting Started React'
 const subtitle = 'JavaScript Library'
 const author = {
@@ -21,7 +24,7 @@ const header = (
       <h2>{title}</h2>
       <h3>{subtitle}</h3>
       <p>
-        Instructor: {author.firstName} {author.lastName}
+        Developer: {author.firstName} {author.lastName}
       </p>
       <small>Date: {date}</small>
     </div>
@@ -53,10 +56,11 @@ const techsFormatted = techs.map((tech) => <li>{tech}</li>)
 
 const user = (
   <div>
-    <img src={reactLogo} alt='ReactLogo' />
-    <img src={reactLogo} alt='ReactLogo' />
-    <img src={reactLogo} alt='ReactLogo' />
-    <img src={reactLogo} alt='ReactLogo' />
+    <p><b>Front end Technologies</b>.</p> 
+    <img className='techimage' src={htmlLogo} alt='ReactLogo' />
+    <img className='techimage' src={cssLogo} alt='ReactLogo' />
+    <img className='techimage' src={javascriptLogo} alt='ReactLogo' />
+    <img className='techimage' src={reactLogo} alt='ReactLogo' />
   </div>
 )
 
