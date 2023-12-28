@@ -16,7 +16,15 @@ const author = {
   firstName: 'Ed Carlos',
   lastName: 'Santos',
 }
-const date = 'Dec 31, 2023'
+
+const today = new Date();
+const dd = String(today.getDate()).padStart(2, '0');
+const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+const yyyy = today.getFullYear();
+
+const date = mm + '/' + dd + '/' + yyyy;
+
+
 
 // JSX element, header
 const header = (
@@ -25,7 +33,7 @@ const header = (
       <h3>{welcome}</h3>
       <h2>{title}</h2>
       
-      <small>Date: {date}</small>
+      <small>Today: {date}</small>
     </div>
   </header>
 )
@@ -63,16 +71,22 @@ const contactCard = (
   </div>
 )
 
-const skils = ['HTML', 'CSS', 'JavaScript' , 'Typescript', 'Proactivity', 'Responsability']
+const skils = ['HTML', 'CSS', 'JavaScript' , 'Typescript', 'Python', 'Artificial Interigence', 'Proactivity', 'Responsability']
 const skilsFormatted = skils.map((itemSkil) => <div className='skill-item'>{itemSkil}</div>)
+const hardskils = [ 'Artificial Interigence', 'Proactivity', 'Responsability']
+const hardskilsFormatted = hardskils.map((itemSkil) => <div className='skill-item-hard'>{itemSkil}</div>)
+
 
 
 const profileSkils = (
 
   <div className='skils-div' >
 
-    <div>{skilsFormatted}</div>
-
+    <div className='skil-div' >
+    {skilsFormatted}
+    {hardskilsFormatted}
+    </div>
+    {/* <div className='skil-div' >{hardskilsFormatted}</div> */}
 
   </div>
 )
