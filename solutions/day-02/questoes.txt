@@ -1,27 +1,121 @@
-Exercises: What is React?
+Exercises:
 
-    What is React?
-    What is a library?
-    What is a single page application?
-    What is a component ?
-    What is the latest version of React?
-    What is DOM?
-    What is React Virtual DOM?
-    What does a web application or a website(composed of) have?
+What is React?
+
+React é uma biblioteca JavaScript popular e gratuita 
+usada para construir interfaces de usuário (IUs) interativas 
+e dinâmicas para aplicativos web. 
+Pense nela como um conjunto de ferramentas reutilizáveis que facilitam a criação de interfaces bonitas e funcionais.
+
+What is a library?
+
+Imagine uma biblioteca física: ela tem vários livros que abordam diferentes temas e fornecem informações valiosas. 
+Da mesma forma, uma biblioteca de programação, como o React, oferece funções prontas para uso que você pode "emprestar" para construir seu aplicativo sem precisar programar tudo do zero. 
+Isso economiza tempo e torna o desenvolvimento mais eficiente.
+
+What is a single page application?
+
+Aplicativos de página única, ou SPAs, são aqueles que carregam todo o conteúdo necessário na primeira página e, em seguida, atualizam apenas partes específicas da interface conforme o usuário interage. 
+Pense no Gmail, por exemplo: você não precisa recarregar toda a página para ler um novo e-mail. 
+O React é perfeito para construir SPAs porque permite atualizações rápidas e sem necessidade de recarregamento completo.
+
+What is a component ?
+
+O React organiza a interface do usuário em pequenos blocos independentes chamados componentes. 
+Cada componente tem seu próprio código e lógica, e eles podem ser facilmente combinados para formar a tela inteira. 
+Isso torna o código mais modular e organizado, facilitando o desenvolvimento e a manutenção.
+
+What is the latest version of React?
+
+A versão atual do React é a 18.2.0, lançada em outubro de 2023. 
+Os desenvolvedores do React estão sempre trabalhando em novas melhorias e recursos, tornando a biblioteca ainda mais poderosa e flexível.
+
+What is DOM?
+
+O DOM (Document Object Model) é a representação em árvore do conteúdo de uma página web. 
+É como o esqueleto por trás daquilo que você vê na tela. 
+O React manipula o DOM para atualizar a interface de usuário de forma eficiente, garantindo uma experiência suave e responsiva.
+
+What is React Virtual DOM?
+
+O React Virtual DOM é uma representação virtual do DOM real. 
+Quando o estado de um componente muda, o React cria um novo Virtual DOM e compara as diferenças com o DOM atual. 
+Apenas as partes que realmente mudaram são atualizadas no DOM real, minimizando o trabalho necessário e melhorando o desempenho.
+
+What does a web application or a website(composed of) have?
+
+Uma aplicação web ou um site normalmente é composto por:
+
+Código front-end: É o código que roda no navegador do usuário e constrói a interface que ele vê e com a qual interage. O React é uma ferramenta popular para o desenvolvimento front-end.
+Código back-end: É o código que roda em um servidor e processa dados, realiza cálculos e se comunica com bancos de dados. Node.js e Python são linguagens populares para o desenvolvimento back-end.
+Banco de dados: Armazena as informações da sua aplicação, como dados de usuários, produtos ou artigos.
+Servidor web: É o software que entrega o código da sua aplicação para o navegador do usuário quando ele acessa o site.
 
 
 Exercises: Why React?
 
-    Why did you chose to use react?
-    What measures do you use to know popularity ?
-    What is more popular, React or Vue ?
+Why did you chose to use react?
+
+Arquitetura baseada em componentes: Divide a interface em pedaços reutilizáveis e independentes, facilitando o gerenciamento de interfaces complexas.
+Virtual DOM: Otimiza a performance ao minimizar manipulações diretas do DOM real, resultando em uma experiência de usuário mais fluida.
+Comunidade e ecossistema fortes: Conta com ampla adoção e suporte, oferecendo uma abundância de recursos, bibliotecas e ferramentas para desenvolvedores.
+Apoio do Facebook: Se beneficia do desenvolvimento contínuo e inovação de uma grande empresa de tecnologia com um histórico sólido.
+Ideal para construir SPAs (Single Page Applications): Se destaca na criação de experiências web dinâmicas e interativas sem recarregamentos completos da página.
+
+
+What measures do you use to know popularity ?
+
+Estrelas no GitHub: Refletem o interesse e engajamento da comunidade.
+Downloads no NPM: Indicam o uso ativo em projetos reais.
+Demanda no mercado de trabalho: A procura por desenvolvedores qualificados em React é alta.
+Tendências do Stack Overflow: Mostram o comportamento da popularidade entre os desenvolvedores.
+Adoção na indústria: Utilizado por grandes empresas como Facebook, Netflix, Airbnb e outras.
+
+
+What is more popular, React or Vue ?
+
+Atualmente, o React é mais popular que o Vue:
+Estrelas no GitHub: O React possui mais de 195.000 estrelas, enquanto o Vue tem mais de 190.000.
+Downloads no NPM: O React tem mais de 15 milhões de downloads semanais, enquanto o Vue tem mais de 2 milhões.
+Demanda no mercado de trabalho: Oportunidades para desenvolvedores de React são mais prevalentes.
+
+
 
 Exercises: JSX
 
-    What is an HTML element?
-    How to write a self closing HTML element?
-    What is an HTML attribute? Write some of them
-    What is JSX?
-    What is babel?
-    What is a transpiler?
+What is an HTML element?
 
+Blocos de construção de páginas web: Definem a estrutura e o conteúdo, desde cabeçalhos e parágrafos até imagens e formulários.
+Exemplo: <h1>Este é um cabeçalho</h1>
+
+
+How to write a self closing HTML element?
+
+Elementos que não contêm conteúdo: Eles se fecham com uma barra antes da chave de fechamento.
+Exemplo: <img src="imagem.jpg" />
+
+
+What is an HTML attribute? Write some of them
+
+Fornecem informações adicionais sobre elementos: Eles sempre são colocados dentro da tag de abertura de um elemento.
+Exemplos comuns:
+    src para fontes de imagens (por exemplo, <img src="foto.jpg">)
+    class para aplicar estilos CSS (por exemplo, <p class="intro">)
+    id para identificação única (por exemplo, <div id="conteudo-principal">)
+    alt para descrições de texto alternativo (por exemplo, <img alt="Descrição da imagem">)
+
+
+What is JSX?
+
+Extensão de sintaxe para JavaScript: Permite escrever estruturas semelhantes a HTML dentro de código JavaScript, principalmente usado no desenvolvimento React.
+Não é HTML real: É transformado em código JavaScript regular durante a compilação.
+
+
+What is babel?
+
+Compilador JavaScript: Converte código JavaScript moderno (incluindo JSX) em código que navegadores mais antigos podem entender, garantindo compatibilidade.
+
+
+What is a transpiler?
+
+Traduz código de um idioma para outro: Babel atua como um transpiler, especificamente convertendo JSX em JavaScript simples.

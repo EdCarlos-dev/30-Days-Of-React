@@ -14,7 +14,7 @@ const author = {
   firstName: 'Ed Carlos',
   lastName: 'Santos',
 }
-const date = 'Oct 2, 2020'
+const date = 'Dec 31, 2023'
 
 // JSX element, header
 const header = (
@@ -31,14 +31,6 @@ const header = (
   </header>
 )
 
-// const numOne = 3
-// const numTwo = 2
-
-// const result = (
-//   <p>
-//     {numOne} + {numTwo} = {numOne + numTwo}
-//   </p>
-// )
 
 const yearBorn = 1987
 const currentYear = new Date().getFullYear()
@@ -52,7 +44,7 @@ const personAge = (
 
 // JSX element, main
 const techs = ['HTML', 'CSS', 'JavaScript' , 'Typescript']
-const techsFormatted = techs.map((tech) => <li>{tech}</li>)
+const techsFormatted = techs.map((item) => <li>{item}</li>)
 
 const user = (
   <div>
@@ -68,15 +60,16 @@ const user = (
 const main = (
   <main>
     <div className='main-wrapper'>
+
       <p>
         Prerequisite to get started{' '}
         <strong>
           <em>react.js</em>
         </strong>
-        :
+
       </p>
+
       <ul>{techsFormatted}</ul>
-      {/* {result} */}
       {personAge}
       {user}
     </div>
