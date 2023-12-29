@@ -4,3 +4,13 @@ $ git branch -a
 
 see all branches
 https://stackoverflow.com/questions/67699/how-do-i-clone-all-remote-branches
+
+Pesquisar e implementar
+
+Promise and Closure
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+
+
+https://developer.mozilla.org/pt-BR/docs/Web
