@@ -19,3 +19,36 @@
 
     Try to make a different custom module in a different file and import it to index.js.
 
+
+
+    O que é um módulo?
+    Um módulo é um arquivo ou conjunto de arquivos que contém funcionalidades específicas em um projeto. No contexto do React, os módulos geralmente são usados para organizar o código em partes separadas e reutilizáveis.
+
+    O que é um pacote?
+    Um pacote é um conjunto de módulos ou bibliotecas que são distribuídos juntos para fornecer funcionalidades específicas. No universo do React, os pacotes geralmente são bibliotecas ou conjuntos de ferramentas que ajudam no desenvolvimento, como o React Router ou o Redux.
+
+    Qual é a diferença entre um módulo e um pacote?
+    Um módulo é uma unidade individual de funcionalidade, enquanto um pacote é um conjunto ou coleção de módulos organizados juntos para fornecer uma funcionalidade mais ampla.
+
+    O que é o NPM?
+    O NPM (Node Package Manager) é um gerenciador de pacotes para JavaScript. Ele é usado para instalar, compartilhar e gerenciar pacotes de código-fonte no ecossistema Node.js.
+
+    O que é o Webpack?
+    O Webpack é uma ferramenta de empacotamento de módulos usada no desenvolvimento front-end. Ele ajuda a agrupar e empacotar vários arquivos (como JavaScript, CSS, imagens) em um ou mais bundles para a implantação em produção.
+
+    Como criar um novo projeto React?
+    Você pode criar um novo projeto React usando o comando npx create-react-app nome-do-projeto no terminal. Isso criará uma estrutura básica de projeto React pronta para uso.
+
+    Quais são os arquivos e pastas dentro de uma pasta de projeto?
+        package.json: Arquivo que armazena metadados do projeto e suas dependências.
+        package-lock.json ou yarn.lock: Arquivos de lock que garantem a consistência das versões das dependências.
+        .gitignore: Arquivo que lista arquivos e pastas a serem ignorados pelo Git.
+        node_modules: Pasta que contém as dependências do projeto.
+        public: Pasta que contém arquivos estáticos, como HTML, imagens, etc.
+
+    Qual é o seu editor de código favorito (Visual Studio Code)?
+    Sim, o Visual Studio Code é um ótimo editor de código.
+
+    Adicione extensões do Visual Studio Code para melhorar a produtividade.
+    
+    Tente criar um módulo personalizado em um arquivo diferente e importe-o para index.js.

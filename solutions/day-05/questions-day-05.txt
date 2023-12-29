@@ -1,0 +1,54 @@
+
+What is props in a React component ?
+How do you access props in a React component ?
+What data types can we pass as props to components ?
+What is a propTypes?
+What is a default propTypes?
+
+####################193
+
+O que são props em um componente React?
+Props (propriedades) em um componente React são dados que podem ser passados de um componente pai para um componente filho. São utilizados para enviar informações de um componente para outro.
+
+Como acessar props em um componente React?
+Para acessar props em um componente funcional, você pode utilizá-las como argumento da função. Em um componente de classe, você pode acessar as props usando this.props.
+
+Exemplo em um componente funcional:
+
+javascript
+
+    const MyComponent = (props) => {
+      return <p>{props.message}</p>;
+    };
+
+    Quais tipos de dados podemos passar como props para componentes?
+    Em React, você pode passar qualquer tipo de dado como props: strings, números, arrays, objetos, funções e até mesmo componentes React.
+
+    O que são propTypes?
+    PropTypes são uma forma de validar as props que um componente recebe. Permitem definir os tipos esperados de cada propriedade e fornecem avisos no console caso os tipos não correspondam.
+
+    O que são defaultProps?
+    defaultProps são valores padrão definidos para as props de um componente. Se uma prop não for fornecida quando o componente for utilizado, o valor padrão definido será usado.
+
+Exemplo de utilização de propTypes e defaultProps:
+
+javascript
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const MyComponent = (props) => {
+  return <p>{props.message}</p>;
+};
+
+MyComponent.propTypes = {
+  message: PropTypes.string.isRequired, // Define a prop 'message' como uma string obrigatória
+};
+
+MyComponent.defaultProps = {
+  message: 'Olá, mundo!', // Define um valor padrão para 'message' caso não seja passado
+};
+
+export default MyComponent;
+
+Neste exemplo, PropTypes.string.isRequired define que a prop message precisa ser do tipo string e é obrigatória. defaultProps define o valor padrão para message caso não seja fornecido ao utilizar o componente.

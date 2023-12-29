@@ -1,0 +1,82 @@
+
+What is the difference between a regular function and an arrow function?
+What is a React Component?
+How do you make a React functional component?
+What is the difference between a pure JavaScript function and a functional component?
+How small is a React component?
+Can we make a button or input field component?
+Make a reusable Button component.
+Make a reusable InputField component.
+Make a reusable alert box component with one div parent element and one p child element of the div(warning alert box, success alert box).
+
+
+Qual é a diferença entre uma função regular e uma função de seta (arrow function)?
+Uma função regular em JavaScript pode ter seu próprio this e é definida usando a palavra-chave function. Já uma função de seta é uma forma mais concisa de escrever uma função anônima e não possui seu próprio this, utilizando o this do contexto léxico onde foi definida.
+
+O que é um Componente React?
+Um componente React é uma peça reutilizável e independente de UI, que pode conter lógica, estrutura e estilos. Ele pode ser uma classe baseada em componente ou uma função de componente.
+
+Como criar um componente funcional React?
+Um componente funcional React é criado como uma função JavaScript que retorna elementos JSX. É simples de criar e é usado principalmente para componentes sem estado (stateless).
+
+Qual é a diferença entre uma função JavaScript pura e um componente funcional?
+Uma função JavaScript pura é uma função convencional em JavaScript que executa uma tarefa específica e pode ou não retornar um valor. Já um componente funcional em React é uma função que retorna elementos JSX e é usado para criar interfaces de usuário.
+
+Quão pequeno pode ser um componente React?
+Um componente React pode ser tão pequeno quanto uma função que retorna um único elemento JSX.
+
+Podemos criar um componente de botão ou campo de entrada (input field)?
+Sim, é possível criar componentes de botão ou campos de entrada em React para encapsular o comportamento e a aparência desses elementos em um componente reutilizável.
+
+Criar um componente reutilizável de botão:
+
+javascript
+
+import React from 'react';
+
+const Button = ({ onClick, text }) => {
+  return (
+    <button onClick={onClick}>
+      {text}
+    </button>
+  );
+};
+
+export default Button;
+
+Criar um componente reutilizável de campo de entrada (input field):
+
+javascript
+
+import React from 'react';
+
+const InputField = ({ type, placeholder, value, onChange }) => {
+  return (
+    <input
+      type={type}
+      placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+    />
+  );
+};
+
+export default InputField;
+
+Criar um componente reutilizável de caixa de alerta:
+
+javascript
+
+import React from 'react';
+
+const AlertBox = ({ type, message }) => {
+  return (
+    <div className={`alert ${type}`}>
+      <p>{message}</p>
+    </div>
+  );
+};
+
+export default AlertBox;
+
+Este componente AlertBox tem dois parâmetros: type (por exemplo, 'warning' ou 'success') para estilização e message para exibir o conteúdo dentro da caixa de alerta. A classe CSS alert pode ser estilizada para mostrar a caixa de alerta de acordo com os tipos definidos.
