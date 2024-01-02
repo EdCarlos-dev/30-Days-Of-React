@@ -1,0 +1,122 @@
+Exercises:Level 1
+
+    What is the importance of React Folder Structure and File Naming
+    How do you export file
+    How do you import file
+    Make a component of module and export it as named or default export
+    Make a component or module and import it
+    Change all the components you have to different folder structure
+
+Exercises:Level 2
+
+    Make a simple portfolio using the components we have created so far. Implement a dark mode by using the function we wrote on day 8 challenge.
+
+
+Exercícios: Nível 1
+
+    Qual é a importância da Estrutura de Pastas e Nomenclatura de Arquivos no React?
+    A estrutura de pastas e a nomenclatura de arquivos são essenciais para organizar e manter um projeto React de forma organizada e escalável. Uma estrutura bem definida ajuda na legibilidade, na manutenção do código e na colaboração entre os membros da equipe.
+
+    Como você exporta um arquivo?
+    Para exportar um arquivo no JavaScript, você pode usar a palavra-chave export junto com default ou named exports.
+
+javascript
+
+// Named export
+export const minhaFuncao = () => {
+  // código aqui
+};
+
+// Default export
+const meuComponente = () => {
+  // código aqui
+};
+export default meuComponente;
+
+    Como você importa um arquivo?
+    Para importar um arquivo no JavaScript, utilize a palavra-chave import.
+
+javascript
+
+// Importando um arquivo com exportação nomeada
+import { minhaFuncao } from './meuArquivo';
+
+// Importando um arquivo com exportação padrão
+import MeuComponente from './outroArquivo';
+
+    Crie um componente de módulo e exporte-o como exportação nomeada ou padrão.
+
+Exemplo de exportação nomeada:
+
+javascript
+
+// No arquivo MeuComponente.js
+export const MeuComponente = () => {
+  // código do componente aqui
+};
+
+Exemplo de exportação padrão:
+
+javascript
+
+// No arquivo OutroComponente.js
+const OutroComponente = () => {
+  // código do componente aqui
+};
+export default OutroComponente;
+
+    Crie um componente ou módulo e importe-o.
+
+Exemplo de importação:
+
+javascript
+
+import { MeuComponente } from './MeuComponente';
+import OutroComponente from './OutroComponente';
+
+    Mude todos os componentes que você tem para uma estrutura de pastas diferente.
+
+    Suponhamos que inicialmente seus componentes estão todos na raiz do diretório:
+
+    markdown
+
+/src
+  - ComponenteA.js
+  - ComponenteB.js
+  - App.js
+
+Você pode reorganizá-los para uma estrutura de pastas assim:
+
+markdown
+
+    /src
+      /components
+        - ComponenteA.js
+        - ComponenteB.js
+      - App.js
+
+Exercícios: Nível 2
+Criando um Portfólio Simples usando os Componentes Criados
+
+Você pode criar um portfólio simples utilizando os componentes que criamos anteriormente e adicionar a funcionalidade de modo escuro que desenvolvemos.
+
+Por exemplo, se você tem o componente MudarFundo que altera o fundo com base na estação do ano ou no horário do dia, você pode integrá-lo ao seu portfólio para oferecer um modo escuro.
+
+javascript
+
+import React from 'react';
+import MudarFundo from './components/MudarFundo'; // Supondo que o componente está em um diretório "components"
+
+function Portfolio() {
+  return (
+    <div>
+      <h1>Meu Portfólio</h1>
+      <MudarFundo />
+      {/* Outros componentes do seu portfólio aqui */}
+    </div>
+  );
+}
+
+export default Portfolio;
+
+Isso integrará a funcionalidade de mudança de fundo com base na estação ou horário do dia ao seu portfólio. Você pode adicionar outros componentes que criou para construir diferentes seções do seu portfólio.

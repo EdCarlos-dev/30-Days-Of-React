@@ -1,0 +1,5 @@
+
+    Why you need to map an array ?
+    Why we need keys during mapping an array ?
+    What is the importance of destructuring your code ?
+    Does destructuring make your code clean and easy to read ?

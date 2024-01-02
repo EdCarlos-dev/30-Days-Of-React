@@ -1,0 +1,86 @@
+Exercises: Level 1
+
+    How do you write a pure JavaScript function
+    What is inheritance and how do you make a child from a parent class?
+    What is class based React component ?
+    What is the difference between functional React component and class based React component ?
+    When do we need to use class based components instead of functional components
+    What is the use cases of class based component ?
+    Which type of component do use most frequently ? functional or class-based component
+    What is React life cycle ? (not covered yet) ?
+    What is state in React ? (not covered yet)
+
+
+
+Escrevendo uma função pura em JavaScript:
+
+Uma função pura em JavaScript é aquela que sempre produz o mesmo resultado quando chamada com os mesmos argumentos e não tem efeitos colaterais. Por exemplo:
+
+javascript
+
+function soma(a, b) {
+  return a + b;
+}
+
+Herança e criação de classes filho de uma classe pai:
+
+Herança em JavaScript permite que uma classe herde propriedades e métodos de outra classe. Aqui está um exemplo simples de como criar uma classe filho a partir de uma classe pai:
+
+javascript
+
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  makeSound() {
+    console.log('Some generic sound');
+  }
+}
+
+class Dog extends Animal {
+  makeSound() {
+    console.log('Woof!');
+  }
+}
+
+const myDog = new Dog('Buddy');
+myDog.makeSound(); // Saída: 'Woof!'
+
+Componente React baseado em classe:
+
+Um componente React baseado em classe é uma forma de criar componentes usando a sintaxe de classe do JavaScript. Aqui está um exemplo:
+
+javascript
+
+import React, { Component } from 'react';
+
+class MyClassComponent extends Component {
+  render() {
+    return <div>Hello, world!</div>;
+  }
+}
+
+Diferença entre componentes React funcional e baseado em classe:
+
+Componentes funcionais são funções JavaScript simples que retornam elementos React, enquanto os componentes baseados em classe são classes JavaScript que estendem a classe Component do React. A principal diferença é a sintaxe e o uso de estados e métodos de ciclo de vida.
+Quando usar componentes baseados em classe em vez de funcionais:
+
+Antes do lançamento dos Hooks no React, os componentes baseados em classe eram usados para gerenciar estados complexos e utilizar o ciclo de vida do componente. Com os Hooks, componentes funcionais podem agora ter estados e usar os ciclos de vida, então a escolha depende das necessidades específicas do projeto.
+Casos de uso dos componentes baseados em classe:
+
+Componentes baseados em classe costumavam ser usados para:
+
+    Gerenciar estados complexos.
+    Utilizar métodos do ciclo de vida do React, como componentDidMount, componentDidUpdate, etc.
+    Usar o conceito de refs para acessar elementos do DOM diretamente.
+
+Tipo de componente mais utilizado:
+
+Antes dos Hooks, os componentes baseados em classe eram mais comuns em aplicações React mais antigas. Com a introdução dos Hooks, os componentes funcionais ganharam popularidade devido à sua simplicidade e flexibilidade.
+Ciclo de vida do React:
+
+O ciclo de vida do React é o conjunto de fases que um componente passa desde a inicialização até ser desmontado. Inclui métodos como componentDidMount, componentDidUpdate, componentWillUnmount, entre outros.
+Estado no React:
+
+O estado no React é um objeto especial que representa a informação mantida por um componente. Ele pode ser alterado através do método setState e, quando atualizado, causa a re-renderização do componente.

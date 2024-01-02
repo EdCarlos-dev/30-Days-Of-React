@@ -1,0 +1,118 @@
+Exercises: Level 1
+
+    What is an event?
+    What is the different between an HTML element event and React event?
+    Write at least 4 keyboard events?
+    Write at least 8 mouse events?
+    What are the most common mouse and keyboard events?
+    Write an event specific to input element?
+    Write an event specific to form element?
+    Display the coordinate of the view port when a mouse is moving on the body?
+    What is the difference between onInput, onChange and onBlur?
+    Where do we put the onSubmit event ?
+
+
+O que é um evento?
+
+Um evento é uma ação reconhecida pelo navegador ou pelo ambiente de desenvolvimento que desencadeia algum tipo de resposta no código. Por exemplo, clique do mouse, pressionamento de tecla, movimento do mouse, etc.
+Qual é a diferença entre um evento de elemento HTML e um evento React?
+
+Os eventos em elementos HTML são tratados diretamente pelo DOM, enquanto no React, os eventos são sintéticos, criados pelo React para padronização entre navegadores. Em termos práticos, o manuseio de eventos em React segue uma abordagem mais uniforme, independente do navegador.
+Escreva pelo menos 4 eventos de teclado:
+
+javascript
+
+document.addEventListener('keydown', (event) => {
+  console.log('Key down:', event.key);
+});
+
+document.addEventListener('keyup', (event) => {
+  console.log('Key up:', event.key);
+});
+
+document.addEventListener('keypress', (event) => {
+  console.log('Key pressed:', event.key);
+});
+
+document.addEventListener('input', (event) => {
+  console.log('Input:', event.target.value);
+});
+
+Escreva pelo menos 8 eventos de mouse:
+
+javascript
+
+document.addEventListener('click', (event) => {
+  console.log('Mouse clicked');
+});
+
+document.addEventListener('dblclick', (event) => {
+  console.log('Mouse double-clicked');
+});
+
+document.addEventListener('mouseenter', (event) => {
+  console.log('Mouse entered');
+});
+
+document.addEventListener('mouseleave', (event) => {
+  console.log('Mouse left');
+});
+
+document.addEventListener('mousedown', (event) => {
+  console.log('Mouse button down');
+});
+
+document.addEventListener('mouseup', (event) => {
+  console.log('Mouse button up');
+});
+
+document.addEventListener('mousemove', (event) => {
+  console.log('Mouse moved:', `X: ${event.clientX}, Y: ${event.clientY}`);
+});
+
+document.addEventListener('wheel', (event) => {
+  console.log('Mouse wheel scrolled');
+});
+
+Quais são os eventos de teclado e mouse mais comuns?
+
+Os eventos de teclado mais comuns são keydown, keyup, keypress, input, change e blur. Os eventos de mouse comuns incluem click, dblclick, mouseenter, mouseleave, mousedown, mouseup, mousemove e wheel.
+Escreva um evento específico para o elemento de entrada (input):
+
+javascript
+
+const inputElement = document.querySelector('input');
+
+inputElement.addEventListener('input', (event) => {
+  console.log('Input changed:', event.target.value);
+});
+
+Escreva um evento específico para o elemento de formulário (form):
+
+javascript
+
+const formElement = document.querySelector('form');
+
+formElement.addEventListener('submit', (event) => {
+  event.preventDefault();
+  console.log('Form submitted');
+  // Other form handling logic can go here
+});
+
+Exibir as coordenadas da janela de visualização quando o mouse se move no body:
+
+javascript
+
+document.body.addEventListener('mousemove', (event) => {
+  console.log(`Mouse coordinates - X: ${event.clientX}, Y: ${event.clientY}`);
+});
+
+Qual é a diferença entre onInput, onChange e onBlur?
+
+    onInput: Dispara imediatamente quando o valor de um elemento de entrada é alterado.
+    onChange: Dispara quando um valor de um elemento de entrada é alterado e o foco é perdido do elemento.
+    onBlur: Dispara quando o elemento perde o foco.
+
+Onde colocamos o evento onSubmit?
+
+O evento onSubmit é usado em elementos de formulário (<form>) e geralmente é adicionado como um atributo no elemento <form> ou é atribuído através de manipulação de eventos no JavaScript. Ele é acionado quando o formulário é enviado, seja pelo pressionamento do botão de envio ou através de JavaScript.

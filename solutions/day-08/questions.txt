@@ -1,0 +1,104 @@
+
+Exercises: Level 1
+
+    What was your state today? Are you happy? I hope so. If you manage to make it this far you should be happy.
+    What is state in React ?
+    What is the difference between props and state in React ?
+    How do you access state in a React component ?
+    How do you set a set in a React component ?
+
+Exercises: Level 2
+
+    Use React state to change the background of the page. You can use this technique to apply a dark mode for your portfolio.
+
+
+
+
+Exercícios: Nível 1
+
+    Como foi o seu estado hoje? Você está feliz? Eu espero que sim. Se você conseguiu chegar até aqui, você deve estar feliz.
+    Hoje estou me sentindo bem, obrigado! Espero que você também esteja bem e animado com os exercícios.
+
+    O que é estado (state) no React?
+    No React, estado (state) é um objeto que contém informações relevantes para um componente. Ele é mantido internamente pelo componente e pode ser alterado ao longo do tempo.
+
+javascript
+
+class MeuComponente extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      contador: 0,
+      nome: 'ChatGPT',
+    };
+  }
+}
+
+    Qual é a diferença entre props e state no React?
+    Props (propriedades) são dados passados de um componente pai para um componente filho, enquanto o estado é gerenciado internamente por um componente e pode ser alterado pelo próprio componente.
+
+    Como se acessa o estado (state) em um componente React?
+    Você pode acessar o estado usando this.state dentro do componente.
+
+javascript
+
+class MeuComponente extends React.Component {
+  render() {
+    return <p>O contador é: {this.state.contador}</p>;
+  }
+}
+
+    Como se define o estado (state) em um componente React?
+    Você utiliza o método setState() para definir o estado em um componente React. Isso atualiza o estado e aciona a renderização do componente.
+
+javascript
+
+this.setState({ contador: this.state.contador + 1 });
+
+Exercícios: Nível 2
+
+Para mudar o fundo da página usando o estado do React, podemos criar um componente que altera o estilo do fundo com base no estado.
+
+javascript
+
+import React, { Component } from 'react';
+
+class MudarFundo extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modoEscuro: false,
+    };
+    this.toggleModo = this.toggleModo.bind(this);
+  }
+
+  toggleModo() {
+    this.setState((estadoAnterior) => ({
+      modoEscuro: !estadoAnterior.modoEscuro,
+    }));
+  }
+
+  render() {
+    const { modoEscuro } = this.state;
+    const estiloFundo = {
+      backgroundColor: modoEscuro ? '#333' : '#fff',
+      color: modoEscuro ? '#fff' : '#333',
+      height: '100vh',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    };
+
+    return (
+      <div style={estiloFundo}>
+        <button onClick={this.toggleModo}>
+          {modoEscuro ? 'Modo Claro' : 'Modo Escuro'}
+        </button>
+      </div>
+    );
+  }
+}
+
+export default MudarFundo;
+
+Neste exemplo, ao clicar no botão, o modo de fundo da página é alternado entre claro e escuro. Isso é feito alterando o estado modoEscuro e atualizando o estilo de acordo com o estado atual.

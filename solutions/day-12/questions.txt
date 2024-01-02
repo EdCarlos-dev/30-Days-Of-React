@@ -1,0 +1,96 @@
+Exercises: Level 1
+
+    What is the importance of form?
+    How many input types do you know?
+    Mention at least four attributes of an input element
+    What is the importance of htmlFor?
+    Write an input type which is not given in the example if there is?
+    What is a controlled input?
+    What do you need to write a controlled input?
+    What event type do you use to listen changes on an input field?
+    What is the value of a checked checkbox?
+    When do you use onChange, onBlur, onSubmit?
+    What is the purpose of writing e.preventDefault() inside the submit handler method?
+    How do you bind data in React? The first input field example is data binding in React.
+    What is validation?
+    What is the event type you use to listen when an input changes?
+    What are event types do you use to validate an input?
+
+Qual é a importância do formulário (form)?
+
+Os formulários são essenciais para coletar dados do usuário, permitindo a interação e envio de informações para um servidor. Eles são a base para muitos aplicativos da web.
+Quantos tipos de entrada (input) você conhece?
+
+Existem vários tipos de entrada em HTML, alguns deles são text, password, number, checkbox, radio, date, email, file, entre outros.
+Mencione pelo menos quatro atributos de um elemento de entrada (input):
+
+    type: Define o tipo de entrada.
+    placeholder: Fornece um texto temporário no campo.
+    value: Define o valor inicial do campo.
+    name: Identifica o nome do campo para envio via formulário.
+
+Qual é a importância do "htmlFor"?
+
+O atributo htmlFor é usado em React para associar um rótulo a um elemento de entrada. No HTML puro, é for, mas em JSX do React, o uso é htmlFor para evitar conflitos com a palavra-chave for do JavaScript.
+Escreva um tipo de entrada que não foi dado no exemplo, se houver.
+
+Um exemplo de tipo de entrada que não foi mencionado é color, que permite aos usuários selecionar uma cor.
+
+html
+
+<input type="color" />
+
+O que é uma entrada controlada (controlled input)?
+
+Uma entrada controlada é aquela em que o valor do campo é controlado pelo estado em vez de ser mantido apenas pelo DOM. Em React, isso significa que o valor do campo é vinculado ao estado do componente.
+O que você precisa para escrever uma entrada controlada?
+
+Para criar uma entrada controlada em React, você precisa de um estado que mantenha o valor do campo e um manipulador de eventos que atualize esse estado.
+
+javascript
+
+import React, { useState } from 'react';
+
+function ControlledInputExample() {
+  const [value, setValue] = useState('');
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
+
+  return (
+    <input
+      type="text"
+      value={value}
+      onChange={handleChange}
+    />
+  );
+}
+
+Que tipo de evento você usa para ouvir mudanças em um campo de entrada?
+
+O evento usado para ouvir mudanças em um campo de entrada é o onChange.
+Qual é o valor de uma caixa de seleção (checkbox) marcada?
+
+O valor de uma caixa de seleção marcada é true ou o valor especificado no atributo value quando estiver marcada.
+Quando você usa onChange, onBlur, onSubmit?
+
+    onChange: Usado para ouvir mudanças em um campo de entrada.
+    onBlur: Disparado quando um campo perde o foco.
+    onSubmit: Usado em formulários para lidar com o evento de envio do formulário.
+
+Qual é o objetivo de escrever e.preventDefault() dentro do manipulador de evento de envio (submit handler)?
+
+O e.preventDefault() é usado para evitar que o formulário seja enviado no método padrão do navegador, permitindo que você lide com a submissão do formulário manualmente usando JavaScript.
+Como você vincula dados (data binding) no React? O primeiro exemplo de campo de entrada é um exemplo de vinculação de dados no React.
+
+No React, a vinculação de dados é feita vinculando o valor de um campo de entrada ao estado do componente. Isso cria uma relação em que o estado reflete o valor do campo e vice-versa, mantendo-os sincronizados.
+O que é validação?
+
+Validação refere-se ao processo de garantir que os dados inseridos pelo usuário atendam aos critérios definidos (como formato correto, presença de dados obrigatórios, etc.) antes de serem processados ou enviados.
+Qual é o tipo de evento que você usa para ouvir quando um input muda?
+
+O evento onChange é usado para ouvir mudanças em um campo de entrada.
+Quais são os tipos de eventos que você usa para validar um input?
+
+Normalmente, eventos como onChange, onBlur ou onSubmit são usados para validar um campo de entrada. Isso depende da preferência e do tipo de validação que você deseja realizar (validação em tempo real enquanto o usuário digita, ao sair do campo ou durante o envio do formulário).

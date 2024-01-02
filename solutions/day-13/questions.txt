@@ -1,0 +1,91 @@
+Exercises: Level 1
+
+    What is a controlled input?
+    What is an uncontrolled input
+    How do you get a content of a certain HTML element in React ?
+    Why it is not a good idea to touch the DOM directly in React ?
+    What is most frequently used in React ? Controlled or Uncontrolled input.
+    What do you need to write uncontrolled input?
+    Does state require to write uncontrolled input?
+    When do you use uncontrolled input?
+    When do you use controlled input?
+    Do you use a controlled or uncontrolled input to validate form input fields?
+
+
+O que é uma entrada controlada (controlled input)?
+
+Uma entrada controlada é aquela em que o valor do campo é controlado pelo estado do React. O valor do campo é mantido no estado do componente e qualquer alteração nele é refletida no estado.
+
+Exemplo de uma entrada controlada em React:
+
+javascript
+
+import React, { useState } from 'react';
+
+function ControlledInput() {
+  const [value, setValue] = useState('');
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
+
+  return (
+    <input type="text" value={value} onChange={handleChange} />
+  );
+}
+
+O que é uma entrada não controlada (uncontrolled input)?
+
+Uma entrada não controlada é aquela em que o valor do campo é mantido pelo DOM e não está vinculado ao estado do React. O React não controla ou rastreia o valor do campo.
+
+Exemplo de uma entrada não controlada em React:
+
+javascript
+
+function UncontrolledInput() {
+  return (
+    <input type="text" defaultValue="Valor inicial" />
+  );
+}
+
+Como você obtém o conteúdo de um determinado elemento HTML no React?
+
+No React, você pode usar referências (ref) para obter o conteúdo de um elemento HTML.
+
+Exemplo de obtenção do conteúdo de um elemento HTML no React:
+
+javascript
+
+import React, { useRef, useEffect } from 'react';
+
+function ElementContent() {
+  const elementRef = useRef(null);
+
+  useEffect(() => {
+    console.log(elementRef.current.textContent);
+  }, []);
+
+  return <div ref={elementRef}>Conteúdo do Elemento</div>;
+}
+
+Por que não é uma boa ideia manipular diretamente o DOM no React?
+
+O React mantém seu próprio estado virtual do DOM (Virtual DOM) para melhorar o desempenho e a eficiência das atualizações de interface do usuário. Manipular o DOM diretamente pode causar conflitos entre o estado interno do React e o estado do DOM real, levando a comportamentos inesperados.
+O que é mais frequentemente usado no React? Entrada controlada ou não controlada?
+
+No React, as entradas controladas são mais frequentemente usadas, pois oferecem maior controle sobre o estado do aplicativo e facilitam a manipulação dos dados do formulário.
+O que é necessário para escrever uma entrada não controlada?
+
+Para criar uma entrada não controlada, você pode usar o atributo defaultValue para definir um valor inicial, mas o React não rastreia ou controla as mudanças posteriores nesse campo.
+O estado é necessário para escrever uma entrada não controlada?
+
+Não, o estado não é necessário para uma entrada não controlada, pois o valor é gerenciado pelo DOM, não pelo estado do React.
+Quando você usa entrada não controlada?
+
+As entradas não controladas são usadas quando você deseja que o DOM controle e mantenha o estado do campo, e o React não precisa rastreá-lo ou atualizá-lo.
+Quando você usa entrada controlada?
+
+As entradas controladas são usadas quando você deseja que o estado do React controle o valor do campo e deseja realizar validações ou lógica adicional com base nesses valores.
+Você usa entrada controlada ou não controlada para validar os campos de entrada de um formulário?
+
+Normalmente, entradas controladas são usadas para validar campos de entrada de um formulário no React, pois permitem um controle mais preciso sobre os dados e suas validações.
