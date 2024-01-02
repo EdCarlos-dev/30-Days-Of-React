@@ -21,8 +21,6 @@ const contact = {
   cellphone: '+55 11 999 999 999',
 }
 
-
-
 const yearBorn = 1987
 const currentYear = new Date().getFullYear()
 const age = currentYear - yearBorn

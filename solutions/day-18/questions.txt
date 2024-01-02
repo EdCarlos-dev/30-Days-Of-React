@@ -1,0 +1,8 @@
+Exercises: Level 1
+
+    What is HTTP request?
+    What are the most common HTTP requests?
+    What is fetch?
+    What is axios?
+    What is the difference between fetch and axios?
+    Do you prefer fetch to axios for make HTTP requests?
