@@ -12,6 +12,8 @@ import userIcon from './images/usericon.png'
 
 const subtitle = 'JavaScript Library'
 
+const currentYear = new Date().getFullYear()
+
 
 const contact = {
   firstName: 'Ed Carlos',
@@ -19,17 +21,18 @@ const contact = {
   country: 'Brazil',
   email: 'email#email.com',
   cellphone: '+55 11 999 999 999',
+  yearBorn: 1987,
+  skills: [
+    'HTML', 
+    'CSS', 
+    'JavaScript' , 
+    'Typescript', 
+    'Python', 
+    'Artificial Interigence', 
+    'Proactivity', 
+    'Responsability']
 }
 
-const yearBorn = 1987
-const currentYear = new Date().getFullYear()
-const age = currentYear - yearBorn
-
-const personAge = (
-  <p>
-   {age} years old
-  </p>
-)
 
 const UserCard = () => {
 
@@ -41,7 +44,7 @@ const UserCard = () => {
         
         <div className='card-div-text'>
           <h2>{contact.firstName} {contact.lastName} </h2>
-          {personAge}
+          <p>{currentYear - contact.yearBorn} years old</p>
           <p>{contact.country}</p>
           <p>{contact.email}</p>
           <p>{contact.cellphone}</p>
@@ -60,8 +63,13 @@ const buttonStyles = {
   
 }
 
-const Button = (props) => <button style={buttonStyles} onClick={props.onClick}>{props.text}</button>
+const Button = (props) => {
 
+  return (
+    <button style={buttonStyles} onClick={props.onClick}>{props.text}</button>
+  )
+
+}
 
   const rainbow = () => {
     let str =  '0123456789abcdef'
@@ -100,19 +108,20 @@ const hardskilsFormatted = hardskils.map((itemSkil) => <div className='skill-ite
 
 
 
-const ProfileSkils = () => (
+const ProfileSkils = () => {
+  return (
 
-  <div className='skils-div' >
+    <div className='skils-div' >
 
-    <div className='skil-div' >
-    {skilsFormatted}
-    {hardskilsFormatted}
+      <div className='skil-div' >
+      {skilsFormatted}
+      {hardskilsFormatted}
+      </div>
+      {/* <div className='skil-div' >{hardskilsFormatted}</div> */}
+
     </div>
-    {/* <div className='skil-div' >{hardskilsFormatted}</div> */}
-
-  </div>
-)
-
+  )
+}
 
 // JSX element, main
 const techs = ['HTML', 'CSS', 'JavaScript' , 'Typescript']
@@ -169,7 +178,9 @@ const Countries = ({ countries }) => {
   const countryList = countries.map((country) => (
     <Country key={country.name} country={country} />
   ))
-  return <div>{countryList}</div>
+  return (
+        <div>{countryList}</div>
+  )
 }
 
 const countriesContainer = (
